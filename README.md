@@ -51,7 +51,7 @@ this.apiKey = '951099e283aef56145acd8d9a92be63e';
 #### Unsplash API (Optional)
 The Unsplash API service is integrated for dynamic image loading in `js/unsplash.js`:
 ```javascript
-// Default placeholder API key (replace with actual key for live usage)
+
 this.apiKey = 'xK9mP7wQ2rN4tL8vB6cF3nM5jH1sA0dE9uI7yT4pO2zX6vC8bN3mQ5wE1rT9yU4i';
 ```
 **To use real Unsplash API:**
