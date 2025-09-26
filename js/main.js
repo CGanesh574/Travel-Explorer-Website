@@ -163,9 +163,6 @@ class TravelExplorerApp {
             case 'booking.html':
                 this.initializeBookingPage();
                 break;
-            case 'about.html':
-                this.initializeAboutPage();
-                break;
             case '404.html':
                 this.initialize404Page();
                 break;
@@ -185,10 +182,6 @@ class TravelExplorerApp {
     initializeBookingPage() {
         // Booking form is handled by booking.js
         console.log('Booking page initialized');
-    }
-    initializeAboutPage() {
-        // Stats counter is handled by stats.js
-        console.log('About page initialized');
     }
     initialize404Page() {
         // Add some fun animations to 404 page

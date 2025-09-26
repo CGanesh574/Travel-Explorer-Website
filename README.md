@@ -15,16 +15,14 @@ A modern, responsive travel discovery platform built with **HTML, CSS, and JavaS
 1. **Home (index.html)** - Hero section with search functionality and Indian destinations
 2. **Destinations (destinations.html)** - Browse and filter destinations (11 destinations total)
 3. **Booking (booking.html)** - Multi-step booking form with INR pricing
-4. **About (about.html)** - Company information, team, and mission/vision
-5. **Contact (contact.html)** - Contact form, office locations, and FAQ
-6. **404 (404.html)** - Enhanced error page
+4. **Contact (contact.html)** - Contact form, office locations, and FAQ
+5. **404 (404.html)** - Enhanced error page
 ## 🗂️ Project Structure
 ```
 travel-explorer/
 ├── index.html              # Home page
 ├── destinations.html       # Destinations gallery
 ├── booking.html           # Booking form
-├── about.html             # About page
 ├── contact.html           # Contact page with form
 ├── 404.html               # 404 error page
 ├── css/
@@ -220,7 +218,7 @@ Edit CSS custom properties in `css/style.css`:
 ### Content
 - **Add destinations**: Edit destinations.html
 - **Modify form fields**: Update booking.html
-- **Change team info**: Edit about.html
+
 ### Images
 Replace image URLs in HTML files or add local images to the `images/` folder.
 ## 📊 Browser Support
