@@ -59,7 +59,7 @@ this.apiKey = 'xK9mP7wQ2rN4tL8vB6cF3nM5jH1sA0dE9uI7yT4pO2zX6vC8bN3mQ5wE1rT9yU4i'
 2. Create an application
 3. Get your API key
 4. Replace the placeholder key in `js/unsplash.js`
-**Note:** The current demo key doesn't affect website functionality - images load from fallback URLs.
+
 
 ### 2. Browser Compatibility
 - Modern browsers (Chrome, Firefox, Safari, Edge)
@@ -94,7 +94,7 @@ The system includes intelligent rate limiting:
 - Local caching system
 - Mock data fallback
 - Error handling
-## 🇮🇳 Indian Travel Focus
+## In Indian Travel Focus
 ### Destinations Included
 **Indian Destinations (7 total):**
 - Mumbai, India - Gateway of India, Bollywood
@@ -143,8 +143,6 @@ await weatherService.updateWeatherBadge('Tokyo', 'weather-tokyo');
 ```javascript
 // Search for destination images
 const images = await unsplashService.searchImages('Paris', 1);
-// Get random image for destination
-const imageUrl = await unsplashService.getRandomImage('Tokyo');
 // Update all destination images dynamically
 await unsplashService.updateDestinationImages('.destination-card');
 ```
