@@ -60,19 +60,8 @@ this.apiKey = 'xK9mP7wQ2rN4tL8vB6cF3nM5jH1sA0dE9uI7yT4pO2zX6vC8bN3mQ5wE1rT9yU4i'
 3. Get your API key
 4. Replace the placeholder key in `js/unsplash.js`
 **Note:** The current demo key doesn't affect website functionality - images load from fallback URLs.
-### 2. Running the Website
-Simply open any HTML file in your web browser:
-- **index.html** - Start here for the home page
-- Or use a local server (recommended):
-  ```bash
-  # Using Python
-  python -m http.server 8000
-  # Using Node.js
-  npx serve .
-  # Using PHP
-  php -S localhost:8000
-  ```
-### 3. Browser Compatibility
+
+### 2. Browser Compatibility
 - Modern browsers (Chrome, Firefox, Safari, Edge)
 - Mobile browsers (iOS Safari, Chrome Mobile)
 - Works offline with cached data
@@ -219,15 +208,7 @@ Edit CSS custom properties in `css/style.css`:
 - **Add destinations**: Edit destinations.html
 - **Modify form fields**: Update booking.html
 
-### Images
-Replace image URLs in HTML files or add local images to the `images/` folder.
-## 📊 Browser Support
-| Browser | Version | Status |
-|---------|---------|--------|
-| Chrome  | 60+     | ✅ Full |
-| Firefox | 55+     | ✅ Full |
-| Safari  | 12+     | ✅ Full |
-| Edge    | 79+     | ✅ Full |
+
 ## 🔒 Security & Privacy
 - **No external data collection**
 - **Local storage only** for form data
@@ -253,12 +234,6 @@ async getAdditionalData(city) {
 ```
 ## 📝 License
 This project is open source and available under the MIT License.
-## 🤝 Contributing
-1. Fork the project
-2. Create your feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
----
+
 **Built with ❤️ using vanilla HTML, CSS, and JavaScript**
 No frameworks, no build tools, just pure web technologies! 🚀
