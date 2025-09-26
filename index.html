@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Explorer - Discover Amazing Destinations</title>
+    <meta name="description" content="Discover amaz    
+    <script src="js/currency.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>el destinations with real-time weather information and stunning imagery.">
+    <meta property="og:title" content="Travel Explorer - Discover Amazing Destinations">
+    <meta property="og:description" content="Modern travel discovery platform with real-time weather integration">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1506905925346-21bda4d32df4">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Travel Explorer">
+    <meta name="twitter:description" content="Discover amazing travel destinations">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-globe-americas"></i>
+                <span>Travel Explorer</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="destinations.html" class="nav-link">Destinations</a>
+                <a href="booking.html" class="nav-link">Book Trip</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    <section class="hero" id="hero">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2835&q=80');"></div>
+        <div class="hero-overlay"></div>
+        <div class="floating-elements">
+            <div class="floating-element" style="top: 10%; left: 5%; animation-delay: 0s;">
+                <i class="fas fa-plane"></i>
+            </div>
+            <div class="floating-element" style="top: 20%; right: 10%; animation-delay: 2s;">
+                <i class="fas fa-compass"></i>
+            </div>
+            <div class="floating-element" style="bottom: 30%; left: 15%; animation-delay: 4s;">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="floating-element" style="bottom: 10%; right: 20%; animation-delay: 6s;">
+                <i class="fas fa-camera"></i>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Discover the World's
+                <span class="gradient-text">Hidden Treasures</span>
+            </h1>
+            <p class="hero-subtitle">
+                Embark on extraordinary journeys to breathtaking destinations. 
+                From ancient wonders to modern marvels, create memories that last a lifetime.
+            </p>
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search for a destination..." class="search-input">
+                    <button class="search-btn" id="search-btn">
+                        <span class="search-text">Search</span>
+                        <div class="loading-spinner" id="search-spinner" style="display: none;">
+                            <div class="spinner"></div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="popular-destinations">
+                <p class="popular-label">Popular destinations:</p>
+                <div class="popular-buttons">
+                    <button class="popular-btn" data-city="Paris">Paris</button>
+                    <button class="popular-btn" data-city="Tokyo">Tokyo</button>
+                    <button class="popular-btn" data-city="New York">New York</button>
+                    <button class="popular-btn" data-city="London">London</button>
+                    <button class="popular-btn" data-city="Bali">Bali</button>
+                    <button class="popular-btn" data-country="India">India</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="search-results" id="search-results" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Search Results</h2>
+            <div class="results-grid" id="results-grid">
+            </div>
+        </div>
+    </section>
+    <section class="featured-destinations">
+        <div class="container">
+            <h2 class="section-title">Featured Destinations</h2>
+            <p class="section-subtitle">Discover these amazing places handpicked by our travel experts</p>
+            <div class="destinations-grid">
+                <div class="destination-card" data-city="Santorini">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Santorini, Greece">
+                        <div class="price-badge">From <span data-price="1200">₹99,780</span></div>
+                        <div class="weather-badge" id="weather-santorini">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Santorini, Greece</h3>
+                        <p class="card-description">Stunning white-washed buildings overlooking the Aegean Sea</p>
+                        <button class="btn-accent weather-btn" data-city="Santorini">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Kyoto">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Kyoto, Japan">
+                        <div class="price-badge">From <span data-price="1800">₹149,670</span></div>
+                        <div class="weather-badge" id="weather-kyoto">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Kyoto, Japan</h3>
+                        <p class="card-description">Ancient temples and beautiful cherry blossoms</p>
+                        <button class="btn-accent weather-btn" data-city="Kyoto">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Mumbai">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Mumbai, India">
+                        <div class="price-badge">From <span data-price="800">₹66,520</span></div>
+                        <div class="weather-badge" id="weather-mumbai">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Mumbai, India</h3>
+                        <p class="card-description">Bollywood capital and financial hub with vibrant street life</p>
+                        <button class="btn-accent weather-btn" data-city="Mumbai">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="destinations.html" class="btn-hero">
+                    Explore All Destinations
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready for Your Next Adventure?</h2>
+                <p class="cta-subtitle">Start planning your dream trip today with personalized recommendations</p>
+                <a href="booking.html" class="btn-hero">
+                    Start Planning
+                    <i class="fas fa-rocket"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <div class="modal-overlay" id="weather-modal-overlay" style="display: none;">
+        <div class="weather-modal" id="weather-modal">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content" id="modal-content">
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-globe-americas"></i>
+                        <span>Travel Explorer</span>
+                    </div>
+                    <p class="footer-description">
+                        Your gateway to amazing travel experiences around the world.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Destinations</h4>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html">Popular Destinations</a></li>
+                        <li><a href="destinations.html">Beach Destinations</a></li>
+                        <li><a href="destinations.html">City Breaks</a></li>
+                        <li><a href="destinations.html">Adventure Travel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Travel Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="booking.html">Book a Trip</a></li>
+                        <li><a href="#">Travel Insurance</a></li>
+                        <li><a href="#">Flight Deals</a></li>
+                        <li><a href="#">Hotel Bookings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Travel Explorer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/unsplash.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

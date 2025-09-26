@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip - Travel Explorer</title>
+    <meta name="description" content="Book your dream vacation with Travel Explorer. Easy booking process with personalized travel planning.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-globe-americas"></i>
+                <span>Travel Explorer</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="destinations.html" class="nav-link">Destinations</a>
+                <a href="booking.html" class="nav-link active">Book Trip</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Book Your Dream Trip</h1>
+            <p class="page-subtitle">Let us help you plan the perfect adventure</p>
+        </div>
+    </section>
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-container">
+                <div class="progress-steps" id="progress-steps">
+                    <div class="step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Personal Info</div>
+                    </div>
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Travel Details</div>
+                    </div>
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Preferences</div>
+                    </div>
+                </div>
+                <form class="booking-form" id="booking-form">
+                    <div class="form-step active" id="step-1">
+                        <h2 class="form-title">Personal Information</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                                <span class="error-message" id="firstName-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                                <span class="error-message" id="lastName-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message" id="email-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                                <span class="error-message" id="phone-error"></span>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" name="address">
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city">
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <select id="country" name="country">
+                                    <option value="">Select Country</option>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="FR">France</option>
+                                    <option value="JP">Japan</option>
+                                    <option value="IN">India</option>
+                                    <option value="BR">Brazil</option>
+                                    <option value="MX">Mexico</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-hero next-step" data-next="2">
+                                Next Step
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-step" id="step-2">
+                        <h2 class="form-title">Travel Details</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="destination">Destination *</label>
+                                <input type="text" id="destination" name="destination" placeholder="Where would you like to go?" required>
+                                <span class="error-message" id="destination-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="travelers">Number of Travelers *</label>
+                                <select id="travelers" name="travelers" required>
+                                    <option value="">Select</option>
+                                    <option value="1">1 Traveler</option>
+                                    <option value="2">2 Travelers</option>
+                                    <option value="3">3 Travelers</option>
+                                    <option value="4">4 Travelers</option>
+                                    <option value="5">5 Travelers</option>
+                                    <option value="6+">6+ Travelers</option>
+                                </select>
+                                <span class="error-message" id="travelers-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="departureDate">Departure Date *</label>
+                                <input type="date" id="departureDate" name="departureDate" required>
+                                <span class="error-message" id="departureDate-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="returnDate">Return Date *</label>
+                                <input type="date" id="returnDate" name="returnDate" required>
+                                <span class="error-message" id="returnDate-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="budget">Budget Range</label>
+                                <select id="budget" name="budget">
+                                    <option value="">Select Budget</option>
+                                    <option value="budget">Budget (₹40,000 - ₹1,25,000)</option>
+                                    <option value="mid">Mid-range (₹1,25,000 - ₹2,50,000)</option>
+                                    <option value="luxury">Luxury (₹2,50,000 - ₹5,80,000)</option>
+                                    <option value="premium">Premium (₹5,80,000+)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="accommodation">Accommodation Preference</label>
+                                <select id="accommodation" name="accommodation">
+                                    <option value="">Select Preference</option>
+                                    <option value="hotel">Hotel</option>
+                                    <option value="resort">Resort</option>
+                                    <option value="apartment">Apartment/Rental</option>
+                                    <option value="hostel">Hostel</option>
+                                    <option value="villa">Villa</option>
+                                    <option value="boutique">Boutique Hotel</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-ghost prev-step" data-prev="1">
+                                <i class="fas fa-arrow-left"></i>
+                                Previous
+                            </button>
+                            <button type="button" class="btn-hero next-step" data-next="3">
+                                Next Step
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-step" id="step-3">
+                        <h2 class="form-title">Travel Preferences</h2>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label>Travel Interests (Select all that apply)</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="interests" value="adventure">
+                                        <span class="checkmark"></span>
+                                        Adventure & Outdoor Activities
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="interests" value="culture">
+                                        <span class="checkmark"></span>
+                                        Culture & History
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="interests" value="food">
+                                        <span class="checkmark"></span>
+                                        Food & Culinary Experiences
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="interests" value="relaxation">
+                                        <span class="checkmark"></span>
+                                        Relaxation & Wellness
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="interests" value="nightlife">
+                                        <span class="checkmark"></span>
+                                        Nightlife & Entertainment
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="interests" value="shopping">
+                                        <span class="checkmark"></span>
+                                        Shopping
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="specialRequests">Special Requests or Notes</label>
+                                <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Tell us about any special requirements, celebrations, or specific requests for your trip..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMethod">Preferred Contact Method</label>
+                                <select id="contactMethod" name="contactMethod">
+                                    <option value="email">Email</option>
+                                    <option value="phone">Phone</option>
+                                    <option value="both">Both</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactTime">Best Time to Contact</label>
+                                <select id="contactTime" name="contactTime">
+                                    <option value="morning">Morning (9 AM - 12 PM)</option>
+                                    <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+                                    <option value="evening">Evening (5 PM - 8 PM)</option>
+                                    <option value="anytime">Anytime</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="newsletter-signup">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" value="yes">
+                                <span class="checkmark"></span>
+                                Subscribe to our newsletter for travel tips and exclusive deals
+                            </label>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-ghost prev-step" data-prev="2">
+                                <i class="fas fa-arrow-left"></i>
+                                Previous
+                            </button>
+                            <button type="submit" class="btn-hero submit-btn">
+                                <span class="submit-text">Submit Booking Request</span>
+                                <div class="loading-spinner" id="submit-spinner" style="display: none;">
+                                    <div class="spinner"></div>
+                                </div>
+                                <i class="fas fa-paper-plane submit-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="success-message" id="success-message" style="display: none;">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>Booking Request Submitted!</h2>
+                    <p>Thank you for choosing Travel Explorer! We've received your booking request and will contact you within 24 hours to discuss your travel plans.</p>
+                    <div class="booking-reference">
+                        <strong>Reference Number: <span id="booking-reference"></span></strong>
+                    </div>
+                    <div class="success-actions">
+                        <a href="index.html" class="btn-hero">
+                            <i class="fas fa-home"></i>
+                            Back to Home
+                        </a>
+                        <a href="destinations.html" class="btn-ghost">
+                            <i class="fas fa-map-marked-alt"></i>
+                            Explore More Destinations
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-globe-americas"></i>
+                        <span>Travel Explorer</span>
+                    </div>
+                    <p class="footer-description">
+                        Your gateway to amazing travel experiences around the world.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Destinations</h4>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html">Popular Destinations</a></li>
+                        <li><a href="destinations.html">Beach Destinations</a></li>
+                        <li><a href="destinations.html">City Breaks</a></li>
+                        <li><a href="destinations.html">Adventure Travel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Travel Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="booking.html">Book a Trip</a></li>
+                        <li><a href="#">Travel Insurance</a></li>
+                        <li><a href="#">Flight Deals</a></li>
+                        <li><a href="#">Hotel Bookings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Travel Explorer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/unsplash.js"></script>
+    <script src="js/currency.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

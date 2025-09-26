@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Travel Explorer</title>
+    <meta name="description" content="Explore amazing travel destinations around the world with real-time weather information.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-globe-americas"></i>
+                <span>Travel Explorer</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="destinations.html" class="nav-link active">Destinations</a>
+                <a href="booking.html" class="nav-link">Book Trip</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Explore Destinations</h1>
+            <p class="page-subtitle">Discover amazing places around the world with real-time weather updates</p>
+        </div>
+    </section>
+    <section class="search-filter-section">
+        <div class="container">
+            <div class="search-filter-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="destination-search" placeholder="Search destinations..." class="search-input">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="beach">Beach</button>
+                    <button class="filter-btn" data-filter="city">City</button>
+                    <button class="filter-btn" data-filter="nature">Nature</button>
+                    <button class="filter-btn" data-filter="culture">Culture</button>
+                    <button class="filter-btn" data-filter="indian">Indian Destinations</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="destinations-section">
+        <div class="container">
+            <div class="destinations-grid" id="destinations-grid">
+                <div class="destination-card" data-city="Paris" data-category="city culture">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Paris, France" loading="lazy">
+                        <div class="price-badge">From <span data-price="1500">₹124,725</span></div>
+                        <div class="weather-badge" id="weather-paris">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Paris, France</h3>
+                        <p class="card-description">The City of Light with iconic landmarks and world-class cuisine</p>
+                        <div class="card-tags">
+                            <span class="tag">City</span>
+                            <span class="tag">Culture</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="Paris">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Tokyo" data-category="city culture">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Tokyo, Japan" loading="lazy">
+                        <div class="price-badge">From <span data-price="2000">₹166,300</span></div>
+                        <div class="weather-badge" id="weather-tokyo">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Tokyo, Japan</h3>
+                        <p class="card-description">Modern metropolis blending tradition with cutting-edge technology</p>
+                        <div class="card-tags">
+                            <span class="tag">City</span>
+                            <span class="tag">Culture</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="Tokyo">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="New York" data-category="city culture">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="New York, USA" loading="lazy">
+                        <div class="price-badge">From <span data-price="1800">₹149,670</span></div>
+                        <div class="weather-badge" id="weather-new-york">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">New York, USA</h3>
+                        <p class="card-description">The city that never sleeps with iconic skyline and Broadway shows</p>
+                        <div class="card-tags">
+                            <span class="tag">City</span>
+                            <span class="tag">Culture</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="New York">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="London" data-category="city culture">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="London, UK" loading="lazy">
+                        <div class="price-badge">From <span data-price="1600">₹133,040</span></div>
+                        <div class="weather-badge" id="weather-london">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">London, UK</h3>
+                        <p class="card-description">Royal heritage, world-class museums, and charming neighborhoods</p>
+                        <div class="card-tags">
+                            <span class="tag">City</span>
+                            <span class="tag">Culture</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="London">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Mumbai" data-category="city culture indian">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Mumbai, India">
+                        <div class="price-badge">From <span data-price="800">₹66,520</span></div>
+                        <div class="weather-badge" id="weather-mumbai">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Mumbai, India</h3>
+                        <p class="card-description">Bollywood capital and financial hub with vibrant street life</p>
+                        <div class="card-tags">
+                            <span class="tag">City</span>
+                            <span class="tag">Culture</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="Mumbai">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Goa" data-category="beach nature indian">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Goa, India">
+                        <div class="price-badge">From <span data-price="600">₹49,890</span></div>
+                        <div class="weather-badge" id="weather-goa">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Goa, India</h3>
+                        <p class="card-description">Pristine beaches, Portuguese heritage, and vibrant nightlife</p>
+                        <div class="card-tags">
+                            <span class="tag">Beach</span>
+                            <span class="tag">Nature</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="Goa">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Kerala" data-category="nature beach indian">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Kerala, India" loading="lazy">
+                        <div class="price-badge">From <span data-price="750">₹62,363</span></div>
+                        <div class="weather-badge" id="weather-kerala">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Kerala, India</h3>
+                        <p class="card-description">God's Own Country with backwaters, spices, and ayurveda</p>
+                        <div class="card-tags">
+                            <span class="tag">Nature</span>
+                            <span class="tag">Beach</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="Kerala">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Agra" data-category="culture city indian">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Agra, India" loading="lazy">
+                        <div class="price-badge">From <span data-price="650">₹54,048</span></div>
+                        <div class="weather-badge" id="weather-agra">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Agra, India</h3>
+                        <p class="card-description">Home to the iconic Taj Mahal and Mughal architecture</p>
+                        <div class="card-tags">
+                            <span class="tag">Culture</span>
+                            <span class="tag">City</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="Agra">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Bangalore" data-category="city nature indian">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Bangalore, India" loading="lazy">
+                        <div class="price-badge">From <span data-price="550">₹45,733</span></div>
+                        <div class="weather-badge" id="weather-bangalore">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Bangalore, India</h3>
+                        <p class="card-description">Silicon Valley of India with pleasant climate and parks</p>
+                        <div class="card-tags">
+                            <span class="tag">City</span>
+                            <span class="tag">Nature</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="Bangalore">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Delhi" data-category="city culture indian">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Delhi, India" loading="lazy">
+                        <div class="price-badge">From <span data-price="680">₹56,542</span></div>
+                        <div class="weather-badge" id="weather-delhi">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Delhi, India</h3>
+                        <p class="card-description">Capital city blend of ancient history and modern India</p>
+                        <div class="card-tags">
+                            <span class="tag">City</span>
+                            <span class="tag">Culture</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="Delhi">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Hyderabad" data-category="city culture indian">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1595658658481-d53d3f999875?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             onerror="this.src='https://images.unsplash.com/photo-1582510003544-4d00b7f74220?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'" 
+                             alt="Hyderabad, India" loading="lazy">
+                        <div class="price-badge">From <span data-price="650">₹54,048</span></div>
+                        <div class="weather-badge" id="weather-hyderabad">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Hyderabad, India</h3>
+                        <p class="card-description">The City of Pearls with historic Charminar and modern IT hub</p>
+                        <div class="card-tags">
+                            <span class="tag">City</span>
+                            <span class="tag">Culture</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="Hyderabad">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Tokyo" data-category="city culture">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=500&h=300&fit=crop" alt="Tokyo, Japan" loading="lazy">
+                        <div class="weather-badge" id="weather-tokyo">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Tokyo, Japan</h3>
+                        <p class="card-description">Modern metropolis blending tradition with cutting-edge technology</p>
+                        <div class="card-tags">
+                            <span class="tag">City</span>
+                            <span class="tag">Culture</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="Tokyo">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Bali" data-category="beach nature">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?w=500&h=300&fit=crop" alt="Bali, Indonesia" loading="lazy">
+                        <div class="weather-badge" id="weather-bali">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Bali, Indonesia</h3>
+                        <p class="card-description">Tropical paradise with beautiful beaches and lush rice terraces</p>
+                        <div class="card-tags">
+                            <span class="tag">Beach</span>
+                            <span class="tag">Nature</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="Bali">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="New York" data-category="city">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=500&h=300&fit=crop" alt="New York, USA" loading="lazy">
+                        <div class="weather-badge" id="weather-newyork">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">New York, USA</h3>
+                        <p class="card-description">The Big Apple - iconic skyline and endless entertainment</p>
+                        <div class="card-tags">
+                            <span class="tag">City</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="New York">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="London" data-category="city culture">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=500&h=300&fit=crop" alt="London, UK" loading="lazy">
+                        <div class="weather-badge" id="weather-london">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">London, UK</h3>
+                        <p class="card-description">Historic charm meets modern sophistication in this royal city</p>
+                        <div class="card-tags">
+                            <span class="tag">City</span>
+                            <span class="tag">Culture</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="London">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Santorini" data-category="beach culture">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=500&h=300&fit=crop" alt="Santorini, Greece" loading="lazy">
+                        <div class="weather-badge" id="weather-santorini">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Santorini, Greece</h3>
+                        <p class="card-description">Stunning white-washed buildings overlooking the Aegean Sea</p>
+                        <div class="card-tags">
+                            <span class="tag">Beach</span>
+                            <span class="tag">Culture</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="Santorini">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Maldives" data-category="beach">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop" alt="Maldives" loading="lazy">
+                        <div class="weather-badge" id="weather-maldives">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Maldives</h3>
+                        <p class="card-description">Crystal clear waters and overwater bungalows in paradise</p>
+                        <div class="card-tags">
+                            <span class="tag">Beach</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="Maldives">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Dubai" data-category="city">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=500&h=300&fit=crop" alt="Dubai, UAE" loading="lazy">
+                        <div class="weather-badge" id="weather-dubai">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Dubai, UAE</h3>
+                        <p class="card-description">Futuristic skyline and luxury shopping in the desert</p>
+                        <div class="card-tags">
+                            <span class="tag">City</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="Dubai">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Sydney" data-category="city beach">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=500&h=300&fit=crop" alt="Sydney, Australia" loading="lazy">
+                        <div class="weather-badge" id="weather-sydney">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Sydney, Australia</h3>
+                        <p class="card-description">Iconic harbor, beautiful beaches, and vibrant city life</p>
+                        <div class="card-tags">
+                            <span class="tag">City</span>
+                            <span class="tag">Beach</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="Sydney">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Amsterdam" data-category="city culture">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?w=500&h=300&fit=crop" alt="Amsterdam, Netherlands" loading="lazy">
+                        <div class="weather-badge" id="weather-amsterdam">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Amsterdam, Netherlands</h3>
+                        <p class="card-description">Charming canals, historic architecture, and vibrant culture</p>
+                        <div class="card-tags">
+                            <span class="tag">City</span>
+                            <span class="tag">Culture</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="Amsterdam">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Cape Town" data-category="city nature">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=500&h=300&fit=crop" alt="Cape Town, South Africa" loading="lazy">
+                        <div class="weather-badge" id="weather-capetown">
+                            <i class="fas fa-sun"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Cape Town, South Africa</h3>
+                        <p class="card-description">Dramatic mountains, beautiful beaches, and rich history</p>
+                        <div class="card-tags">
+                            <span class="tag">City</span>
+                            <span class="tag">Nature</span>
+                        </div>
+                        <button class="btn-accent weather-btn" data-city="Cape Town">
+                            <i class="fas fa-cloud-sun"></i>
+                            View Weather
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center load-more-container">
+                <button class="btn-ghost" id="load-more-btn" style="display: none;">
+                    Load More Destinations
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <div class="modal-overlay" id="weather-modal-overlay" style="display: none;">
+        <div class="weather-modal" id="weather-modal">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content" id="modal-content">
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-globe-americas"></i>
+                        <span>Travel Explorer</span>
+                    </div>
+                    <p class="footer-description">
+                        Your gateway to amazing travel experiences around the world.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Destinations</h4>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html">Popular Destinations</a></li>
+                        <li><a href="destinations.html">Beach Destinations</a></li>
+                        <li><a href="destinations.html">City Breaks</a></li>
+                        <li><a href="destinations.html">Adventure Travel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Travel Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="booking.html">Book a Trip</a></li>
+                        <li><a href="#">Travel Insurance</a></li>
+                        <li><a href="#">Flight Deals</a></li>
+                        <li><a href="#">Hotel Bookings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Travel Explorer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/unsplash.js"></script>
+    <script src="js/currency.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/destinations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
