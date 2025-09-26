@@ -26,7 +26,7 @@ travel-explorer/
 ├── contact.html           # Contact page with form
 ├── 404.html               # 404 error page
 ├── css/
-│   └── style.css          # Complete styling system (2500+ lines)
+│   └── style.css          # Complete styling system 
 ├── js/
 │   ├── main.js            # Main application logic
 │   ├── navigation.js      # Navigation functionality
